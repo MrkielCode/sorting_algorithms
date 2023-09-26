@@ -9,7 +9,7 @@
 
 void counting_sort(int *array, size_t size)
 {
-	int *counter, *dup_array, j, max_element = array[0];
+	int *counter, *dup_array, j, max_element = 0;
 	size_t i;
 
 	for (i = 1; i < size; i++)
