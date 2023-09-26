@@ -9,16 +9,17 @@
 
 void counting_sort(int *array, size_t size)
 {
-	int *counter, *dup_array, j, max_element = array[0];
+	int *counter, *dup_array, j, max_element = 0;
 	size_t i;
 
 	for (i = 1; i < size; i++)
 	{
-		if (array[i] > max_element)
+		if (array[i] > max_element
+				)
 			max_element = array[i];
 	}
 
-	counter = (int *)malloc(sizeof(int) * max_element + 1);
+	counter = (int *)malloc(sizeof(int) * (max_element + 1));
 	dup_array = (int *)malloc(sizeof(int) * size);
 	if (counter == NULL || dup_array == NULL)
 		return;
